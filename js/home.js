@@ -3,10 +3,17 @@ document.getElementById("add-money-main")
         .addEventListener("click", function(e){
             e.preventDefault();
             const addMoneyForm = document.getElementById("add-money-form");
-            addMoneyForm.style.display = "block";
+            console.log(addMoneyForm);
 })
 
 
+// cashout main button
+document.getElementById("cash-out-btn")
+        .addEventListener("click", function(e){
+            e.preventDefault();
+            const cashoutmoneyForm = document.getElementById("cash-out-form");
+            console.log(cashoutmoneyForm);
+})
 
 
 

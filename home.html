@@ -10,7 +10,7 @@
     <section class="w-[450px] mx-auto border-10 border-amber-150 rounded-3xl h-screen bg-amber-100 flex flex-col">
             <div id="current-balance" class="w-full mx-auto text-center text-4xl font-bold my-5">12500</div> <hr class="my-3">
             <button class="w-1/2 mx-auto mb-3 bg-blue-500 rounded-lg py-2 text-xl text-white font-bold" id="add-money-main">Add Money</button>
-            <button class="w-1/2 mx-auto bg-blue-500 rounded-lg py-2 text-xl text-white font-bold" id="">Cashout</button>
+            <button class="w-1/2 mx-auto bg-red-500 rounded-lg py-2 text-xl text-white font-bold" id="cash-out-btn">Cashout</button>
             <hr class="my-3">
 
 
@@ -22,6 +22,15 @@
             <input id="pin-number" type="password" placeholder="Pin" class="block w-3/5 mx-auto text-xl border-2 border-blue-500 rounded-lg outline-blue-500 bg-white text-center">
             <button class="w-3/5 bg-blue-500 rounded-lg py-2 text-xl text-white font-bold" id="add-money">Add MOney</button>
         </form>
+
+
+        <!-- Cashout form -->
+         <form class="hidden text-center space-y-5" action="" id="cash-out-form">
+            <label for="phone" class="text-xl text-blue-500">Enter Amount</label>
+            <input type="text" placeholder="Amount" class="block w-3/5 mx-auto text-xl border-2 border-blue-500 rounded-lg outline-blue-500 bg-white text-center" id="cashout-value">
+            <label for="password" class="text-xl text-blue-500">Enter Your Pin</label>
+            <input id="cashout-pin" type="password" placeholder="Pin" class="block w-3/5 mx-auto text-xl border-2 border-blue-500 rounded-lg outline-blue-500 bg-white text-center">
+            <button class="w-3/5 bg-red-500 rounded-lg py-2 text-xl text-white font-bold" id="cash-out">Cashout</button>
         </form>
     </section>
 
