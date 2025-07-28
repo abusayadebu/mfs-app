@@ -1,8 +1,15 @@
 document.getElementById("btn-login")
         .addEventListener("click", function(event){
             event.preventDefault();
-            console.log("login button clicked")
 
-            const phoneNumberValue = document.getElementById("phoneNumber").value;
-            console.log(phoneNumberValue)
+            const phoneNumber = document.getElementById("phone-number").value;
+            const pinNumber = document.getElementById("pin-number").value;
+
+            if(phoneNumber === '123456789' && pinNumber === '1234'){
+                console.log("you are logged in")
+                window.location.href = "../home.html"
+            }
+            else{
+                alert("credentials are wrong");
+            }
 })
