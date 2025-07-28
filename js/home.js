@@ -1,3 +1,17 @@
+// Add money main button
+document.getElementById("add-money-main")
+        .addEventListener("click", function(e){
+            e.preventDefault();
+            const addMoneyForm = document.getElementById("add-money-form");
+            addMoneyForm.style.display = "block";
+})
+
+
+
+
+
+
+// button add money in the form
 document.getElementById("add-money").addEventListener("click", function(event){
     event.preventDefault();
     const amountValue = document.getElementById("amount-value").value;
