@@ -50,14 +50,15 @@ document.getElementById("add-money").addEventListener("click", function(event){
 document.getElementById("cash-out").addEventListener("click", function(e){
     e.preventDefault();
     
-    const currentBalance = document.getElementById("current-balance").innerText;
-    const cBalancenumber = Number(currentBalance);
     const cashOutPin = document.getElementById("cashout-pin").value;
-    const cashOutValue = document.getElementById("cashout-value").value;
-    const cashOutNumber =Number(cashOutValue);
 
     if(cashOutPin == 1234){
-        const makeCashoutAmount = cashOutNumber - cBalancenumber;
+        const currentBalance = document.getElementById("current-balance").innerText;
+        const cBalancenumber = parseFloat(currentBalance);
+        const cashOutValue = document.getElementById("cashout-value").value;
+        const cashOutNumber =parseFloat(cashOutValue);
+        
+        const makeCashoutAmount = cBalancenumber - cashOutNumber;
         document.getElementById("current-balance").innerText = makeCashoutAmount;
     }
     else{
