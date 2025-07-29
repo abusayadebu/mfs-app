@@ -1,9 +1,11 @@
 // Add money main button
 document.getElementById("add-money-main")
         .addEventListener("click", function(e){
-            e.preventDefault();
             const addMoneyForm = document.getElementById("add-money-form");
-            console.log(addMoneyForm);
+            addMoneyForm.classList.remove("hidden");
+
+            const hideCashOutForm = document.getElementById("cash-out-form");
+            hideCashOutForm.classList.add("hidden");
 })
 
 
@@ -12,7 +14,10 @@ document.getElementById("cash-out-btn")
         .addEventListener("click", function(e){
             e.preventDefault();
             const cashoutmoneyForm = document.getElementById("cash-out-form");
-            console.log(cashoutmoneyForm);
+            cashoutmoneyForm.classList.remove("hidden");
+
+            const hideAddMoneyForm = document.getElementById("add-money-form");
+            hideAddMoneyForm.classList.add("hidden");
 })
 
 
