@@ -23,7 +23,7 @@ document.getElementById("cash-out-btn")
 
 
 
-// button add money in the form
+// button add money in the  add-money form
 document.getElementById("add-money").addEventListener("click", function(event){
     event.preventDefault();
     const amountValue = document.getElementById("amount-value").value;
@@ -42,5 +42,27 @@ document.getElementById("add-money").addEventListener("click", function(event){
         alert("Credencial wrong")
     }
 
-
 })
+
+
+// Button cashout in the cashout form---
+
+document.getElementById("cash-out").addEventListener("click", function(e){
+    e.preventDefault();
+    
+    const currentBalance = document.getElementById("current-balance").innerText;
+    const cBalancenumber = Number(currentBalance);
+    const cashOutPin = document.getElementById("cashout-pin").value;
+    const cashOutValue = document.getElementById("cashout-value").value;
+    const cashOutNumber =Number(cashOutValue);
+
+    if(cashOutPin == 1234){
+        const makeCashoutAmount = cashOutNumber - cBalancenumber;
+        document.getElementById("current-balance").innerText = makeCashoutAmount;
+    }
+    else{
+        alert("Credencials are wrong");
+    }
+
+    }
+)
